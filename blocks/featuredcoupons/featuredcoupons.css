@@ -1,0 +1,40 @@
+.featuredcoupons .callout {
+    padding: .5rem;
+    color: #fff;
+    background-color: #be0108;
+    text-transform: uppercase;
+    font: 700 1rem / 1.2em "Glacial", Arial, sans-serif;
+}
+
+.featuredcoupons .coupons {
+    background-color: #eeebe4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.featuredcoupons .coupon {
+    flex: 1;
+    padding: 2rem;
+    border-left: solid 1px #e0dcd4;;
+}
+
+.featuredcoupons .coupon:first-child {
+    border: 0;
+}
+
+.featuredcoupons .coupons .title {
+    display: block;
+    color: #be0108;
+    font: 700 1.5em / 1em "Glacial", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.featuredcoupons .coupons .subtitle {
+    color: #be0108;
+}
+
+.featuredcoupons .coupons .description {
+    color: #797979;
+    font: 400 .75em / 2em Arial, Verdana, sans-serif;
+}
+

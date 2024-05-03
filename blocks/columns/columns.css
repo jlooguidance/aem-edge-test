@@ -19,6 +19,18 @@
   display: block;
 }
 
+.columns-wrapper > div ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.columns-wrapper > div ul > li img {
+  width: 150px;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;

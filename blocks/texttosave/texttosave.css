@@ -1,0 +1,16 @@
+.texttosave {
+    position: relative;
+    font: 700 1em / 1.2em 'Glacial', Arial, Sans-Serif;
+    color: #bbd8b9;
+    padding-left: 2rem;
+}
+
+.texttosave:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    width: 18px;
+    height: 22px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAWCAMAAAD6gTxzAAAAdVBMVEUAAAC72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72Lm72LnO9LsuAAAAJnRSTlMAv/Bku8aXA88nD+DYqqabg35wbDchtIyGU0kzCPbmr5F1HF0uFR4bjhEAAAC5SURBVBjTfdDZDoMgEAXQkQFlc9/qvrT1/z+xWKWSmPQ+3MDhgcnAN8VcMca8KhFwJIhV3JRSimek0h3kSql9hIJHAM04THBF6hy8VJfgpGUQdlHvUmCooNKlNwfaM3QpmcCDVnWX4NgZgtgXr3OGSDVgKKCE8arOM5/yeIWdyjkXAmutUjzG8YJzhodv6iT71Z0e/4jaQ/ojvSBmWY7Ia0vDtm1hRkwnlvZLC9r0YgkJITw0dS3kng98IAoKCFf+9AAAAABJRU5ErkJggg==) no-repeat;
+}
