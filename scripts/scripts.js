@@ -47,7 +47,6 @@ async function loadFonts() {
  * @param {Element} main The container element
  */
 function buildAutoBlocks(main) {
-  console.log('jloo===build auto block')
   try {
     buildHeroBlock(main);
   } catch (error) {
