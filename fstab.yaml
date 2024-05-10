@@ -1,2 +1,5 @@
 mountpoints:
   /: https://drive.google.com/drive/u/0/folders/1Xi7oO__5rR5GuYuWlJE_kysdp52D86vI
+
+folders:
+  /locations/: /locations/default-location
