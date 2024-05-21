@@ -1,3 +1,5 @@
+import { fetchPlaceholders } from '../../scripts/aem.js';
+
 const e = React.createElement
 
 const parseHandleFromPath = () => {
@@ -28,7 +30,22 @@ const makeBreadcrumbs = (location) => {
   ])
 }
 
-const makeInformation = (location) => {
+const getDescription = (location, placeholders) => {
+  const { locationDescription } = placeholders
+  const { Name, Address, Intersection, Hours, Phone } = location
+
+  console.log('jloo', location)
+
+  return locationDescription
+    .replaceAll('{{name}}', Name)
+    .replaceAll('{{hours}}', Hours)
+    .replaceAll('{{address}}', Address)
+    .replaceAll('{{intersection}}', Intersection)
+    .replaceAll('{{phone}}', Phone)
+
+}
+
+const makeInformation = (location, placeholders) => {
   const $divContact = e('div', {
     className: 'information--contact, single-shop-info',
     itemscope: 'itemscope',
@@ -39,6 +56,7 @@ const makeInformation = (location) => {
       content: location.Address,
     }),
     e('h2', {}, location.Headline),
+    e('p', {}, getDescription(location, placeholders)),
     e('div', { className: 'single-loc-address' }, [
       e('div', {}, location.Address),
       e('div', {}, location.Hours),
@@ -72,7 +90,10 @@ const makeInformation = (location) => {
 }
 
 export const decorate = async (block) => {
+  const placeholders = await fetchPlaceholders();
   const locationHandle = parseHandleFromPath()
+
+  console.log('placeholders', placeholders)
 
   // TODO: I'm sure we can pass in a query parmeter to filter the results
   // but brute forcing it for now
@@ -85,7 +106,7 @@ export const decorate = async (block) => {
 
   root.render([
     makeBreadcrumbs(location),
-    makeInformation(location),
+    makeInformation(location, placeholders),
   ])
 
 
